@@ -1,0 +1,418 @@
+@font-face {
+    font-family: Futura;
+    src: url(./Futura-Bold.ttf);
+}
+@font-face {
+    font-family: Gilroy;
+    src: url(./Gilroy-Medium.ttf);
+}
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Gilroy';
+}
+
+*::selection {
+    color: #fff;
+    background-color: #000;
+}
+
+html, body {
+    height: 100%;
+    width: 100%;
+}
+
+body {
+    margin: 0;
+    padding: 0;
+    background: url('backg.gif') no-repeat center center fixed;
+    background-size: cover;
+}
+
+/* Rest of your CSS rules for other elements */
+
+
+
+#nav {
+    /* height: 100px; */
+    width: 100%;
+    /* background-color: burlywood; */
+    position: fixed;
+    z-index: 99;
+    display: flex;
+    align-items: flex-start;
+    justify-content: space-between;
+    padding: 25px;
+}
+
+#nav #nav-part2 {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 40px;
+}
+
+#links {
+    padding: 10px;
+}
+
+#nav-part1 {
+    /* background-color: RED; */
+    height: 82px;
+    overflow: hidden;
+}
+#menu-icon {
+    font-size: 24px; /* Adjust the icon size as needed */
+    cursor: pointer;
+    display: none;
+}
+
+#dropdown-links {
+    display: none;
+    background: transparent; /* Set the background to fully transparent */
+    backdrop-filter: blur(10px); /* Add a blur effect to the background */
+    position: absolute;
+    top: 100%; /* Position below the icon */
+    left: 0;
+    width: 100%;
+    border-radius: 10px; /* Add rounded corners */
+    box-shadow: 0px 2px 6px rgba(0, 0, 0, 0.1); /* Optional shadow effect */
+    text-align: center; /* Center-align the text */
+    
+}
+
+#dropdown-links a {
+    display: block; /* Display each link in a new line */
+    padding: 10px 0; /* Add vertical padding to center the text */
+    text-decoration: none;
+    color: white;
+    
+     /* Set text color to white */
+}
+
+@media (min-width: 598px) {
+    #nav-part2 #icons {
+        display: block;
+        position: relative;
+    }
+
+    #menu-icon {
+        display: block;
+    }
+
+    #dropdown-links {
+        display: none;
+    }
+}
+
+
+#nav-part1 svg {
+    display: block;
+}
+
+#nav-part2 #links a {
+    text-transform: uppercase;
+
+    text-decoration: none;
+    color: #fbc5e8;
+    font-weight: 500;
+    font-size: 14px;
+    margin: 0 20px;
+}
+
+#icons {
+    padding: 10px;
+    border-radius: 50px;
+    background-color: #F7F7F7;
+}
+
+#nav-part2 #icons i {
+    font-size: 18px;
+    margin: 0 20px;
+    font-weight: 100;
+}
+
+#cursor {
+    height: 180px;
+    width: 180px;
+    background-color: rgba(224, 139, 189, 0.814);
+    border-radius: 50%;
+    position: fixed;
+    transform: translate(-50%, -50%) scale(0);
+
+}
+
+#page1 {
+    min-height: 100vh;
+    color: white;
+    
+    background-size: cover;
+    position: relative;
+    width: 100%;
+    padding: 0 1vw;
+    padding-top: 20vh;
+}
+
+
+#page1 h1 {
+    font-size: 15vw;
+    text-transform: uppercase;
+    font-family: futura;
+    line-height: 14vw;
+    letter-spacing: -10px;
+}
+#page1 h1#uvce{
+    color: red;
+    font-size: 15.8vw;
+}
+
+
+
+
+
+
+#page2 {
+    min-height: 100vh;
+    width: 100%;
+    position: relative;
+    display: flex;
+    align-items: center;
+    padding: 3vw 1vw;
+    justify-content: space-between;
+}
+
+/* Hide the links by default */
+#nav-part2 #links {
+    display: block;
+}
+
+/* Display the menu icon for smaller screens */
+@media (max-width: 768px) {
+    #nav-part2 #links {
+        display: none;
+    }
+
+    #nav-part2 .ri-menu-fill {
+        display: block;
+        font-size: 24px; /* Adjust the icon size as needed */
+        cursor: pointer;
+    }
+}
+
+
+#page2 .elem {
+    height: 100%;
+    width: 31%;
+    /* background-color: red; */
+    overflow: hidden;
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+#page2 .elem img {
+    height: 100%;
+    width: 100%;
+    object-fit: cover;
+    scale: 1.1;
+}
+
+#page2 .elem .dets {
+    height: 60px;
+    border-radius: 50px;
+    width: 70%;
+    position: absolute;
+    z-index: 9;
+    background-color: rgb(229, 156, 186);
+
+
+}
+
+#page3 {
+    min-height: 120vh;
+    width: 100%;
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;
+    flex-wrap: wrap;
+}
+
+.child {
+    height: 54vh;
+    width: 38vw;
+    /* background-color: red; */
+    /* border: 2px solid #000; */
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.child img {
+    height: 100%;
+}
+
+
+@media (max-width:6000px) {
+
+    #nav {
+        /* height: 100px; */
+        width: 100%;
+        /* background-color: burlywood; */
+        position: fixed;
+        z-index: 99;
+        display: flex;
+        align-items: flex-start;
+        justify-content: space-between;
+        padding: 15px;
+    }
+    #page2 .elem .dets:hover{
+        height: 100px;
+        text-align: center;
+        
+       
+    }
+    #page2 .elem .dets:hover .text {
+        display: block;
+      }
+      #page2 .elem .dets .text {
+        position: absolute;
+        bottom: 0;
+        left: 0;
+        width: 100%;
+        background: rgba(0, 0, 0, 0.7);
+        color: white;
+        padding: 10px;
+        text-align: center;
+        display: none;
+      }
+      #page2 .elem .dets .text a {
+        text-decoration: none;
+        font-weight: bold;
+        color: white;
+      }
+
+    #nav #nav-part2 {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        gap: 40px;
+    }
+
+    #links {
+        padding: 10px;
+        display: none;
+    }
+
+    #nav-part1 {
+        /* background-color: RED; */
+        height: 67px;
+        overflow: hidden;
+    }
+
+    #nav-part1 svg {
+        display: block;
+        height: 67px;
+        width: 80px;
+    }
+    #nav #twogoodlogo{
+        height: 40px;
+        margin-left: -20px;
+    }
+
+    #icons {
+        padding: 7px;
+        border-radius: 50px;
+        background-color: #F7F7F7;
+    }
+
+    #nav-part2 #icons i {
+        font-size: 15px;
+        margin: 0 20px;
+        font-weight: 100;
+    }
+
+    #page1 {
+        /* background-color: red; */
+        min-height: 70vh;
+        width: 100%;
+        padding: 0 3vw;
+        padding-top: 25vh;
+
+    }
+
+    #page1 h1 {
+        font-size: 13.5vw;
+        letter-spacing: -3px;
+    }
+
+    
+
+  
+    #page2 {
+        min-height: 100vh;
+        width: 100%;
+        position: relative;
+        display: flex;
+        align-items: center;
+        padding: 5vw 3vw;
+        flex-direction: column;
+        justify-content: space-between;
+        /* background-color: red; */
+    }
+
+    #page2 .elem {
+        height: 100vh;
+        width: 100%;
+        /* background-color: red; */
+        overflow: hidden;
+        margin-bottom: 3vw;
+        border-radius: 50px;
+        border-color: #F7F7F7;
+        border-width: 40px;
+        box-shadow: 0 0 10px rgba(255, 255, 255, 0.5);
+    }
+
+    #page2 .elem .dets {
+        text-align: center;
+        height: 40px;
+        border-radius: 50px;
+        width: 70%;
+        position: absolute;
+        z-index: 9;
+        background-color: rgba(250, 146, 241, 0.3);
+        backdrop-filter: blur(5px);
+        overflow: hidden;
+        transition: height 0.3s;
+      }
+
+    #page3 {
+        min-height: 120vh;
+        width: 100%;
+        position: relative;
+        display: flex;
+        align-items: center;
+        justify-content: space-evenly;
+        flex-wrap: wrap;
+    }
+
+    .child {
+        height: 54vh;
+        width: 88vw;
+        /* background-color: red; */
+        /* border: 2px solid #000; */
+        position: relative;
+        padding: 15vw;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+
+    .child img {
+        height: 100%;
+    }
+
+}
